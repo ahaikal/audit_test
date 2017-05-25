@@ -16,13 +16,13 @@ ActiveRecord::Schema.define(version: 20170523185554) do
   enable_extension "plpgsql"
 
   create_table "audits", force: :cascade do |t|
-    t.string   "datetime"
-    t.integer  "patient_id"
-    t.integer  "user_id"
-    t.string   "action"
+    t.date     "datetime"
+    t.string   "patient_id"
+    t.string   "user_id"
+    t.string   "user_action"
     t.text     "payload"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
 end

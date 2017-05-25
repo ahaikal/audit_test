@@ -1,10 +1,10 @@
 class CreateAudits < ActiveRecord::Migration[5.0]
   def change
     create_table :audits do |t|
-      t.string :datetime
-      t.integer :patient_id
-      t.integer :user_id
-      t.string :action
+      t.date :datetime
+      t.string :patient_id
+      t.string :user_id
+      t.string :user_action
       t.text :payload
 
       t.timestamps

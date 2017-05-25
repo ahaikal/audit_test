@@ -3,7 +3,7 @@ class AuditsController < ApplicationController
 
   # GET /audits
   def index
-    @audits = Audit.all
+    @audits = Audit.filter(params.slice(:datetime, :patient_id, :user_id, :user_action))
 
     render json: @audits
   end
